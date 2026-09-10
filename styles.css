@@ -12,6 +12,10 @@ h1,h2,h3,.nav-btn strong,.journey strong,.flip strong,.bucket-button,.form-promp
 .topbar{height:88px;padding-inline:5vw}
 .course-title{font-size:20px;font-weight:600;letter-spacing:.2px;color:#f4fbfd}
 .course-title,.exact-course-title{text-transform:none}
+.top-meta{display:flex;align-items:center;gap:30px;margin-left:auto}
+.top-identity,.course-clock{text-align:right;line-height:1.25}
+.top-identity small,.course-clock small{display:block;color:#c6e0e9;font-size:12px}
+.top-identity strong{display:block;max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:17px;color:white}
 .panel-toggle{left:calc(5vw + 268px);top:108px;width:32px;height:32px;border-color:#d9e6ec;border-radius:50%;background:#ffffffde;box-shadow:0 2px 12px #15384f10;color:#476879;opacity:.72;backdrop-filter:blur(8px);transition:opacity .18s ease,background .18s ease,transform .18s ease}
 .panel-toggle:hover{opacity:1;background:white;transform:translateY(-1px)}
 .panel-toggle svg{stroke-width:1.55}
@@ -27,7 +31,7 @@ h1,h2,h3,.nav-btn strong,.journey strong,.flip strong,.bucket-button,.form-promp
 .form-question{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
 .locator-choice{margin:0;align-items:center;justify-content:center;min-height:64px;font-size:20px;font-weight:700}
 @media(max-width:1100px) and (min-width:761px){.panel-toggle{left:calc(5vw + 223px)}}
-@media(max-width:760px){.topbar{height:78px}.course-title{font-size:17px;max-width:210px;line-height:1.2}.panel-toggle{top:92px;left:auto;right:14px}.collapsed .panel-toggle{left:10px;right:auto}.layout{margin-top:22px}.lesson-header{padding-top:34px}.form-resource .actions{align-items:stretch}.form-resource .btn{width:100%}.form-question{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.topbar{height:78px}.course-title{font-size:15px;max-width:140px;line-height:1.15}.top-meta{gap:12px}.top-identity strong{max-width:105px;font-size:13px}.top-identity small,.course-clock small{font-size:10px}.course-clock{min-width:62px}.course-clock strong{font-size:15px}.panel-toggle{top:92px;left:auto;right:14px}.collapsed .panel-toggle{left:10px;right:auto}.layout{margin-top:22px}.lesson-header{padding-top:34px}.form-resource .actions{align-items:stretch}.form-resource .btn{width:100%}.form-question{grid-template-columns:1fr 1fr}}
 
 .name-gate{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:24px;background:#0c263cbb;backdrop-filter:blur(10px)}
 .name-gate[hidden]{display:none}
