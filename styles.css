@@ -11,6 +11,7 @@
 h1,h2,h3,.nav-btn strong,.journey strong,.flip strong,.bucket-button,.form-prompt strong,.course-title{text-transform:capitalize}
 .topbar{height:88px;padding-inline:5vw}
 .course-title{font-size:20px;font-weight:600;letter-spacing:.2px;color:#f4fbfd}
+.course-title,.exact-course-title{text-transform:none}
 .panel-toggle{left:calc(5vw + 268px);top:108px;width:32px;height:32px;border-color:#d9e6ec;border-radius:50%;background:#ffffffde;box-shadow:0 2px 12px #15384f10;color:#476879;opacity:.72;backdrop-filter:blur(8px);transition:opacity .18s ease,background .18s ease,transform .18s ease}
 .panel-toggle:hover{opacity:1;background:white;transform:translateY(-1px)}
 .panel-toggle svg{stroke-width:1.55}

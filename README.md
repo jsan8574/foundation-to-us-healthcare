@@ -1,4 +1,4 @@
-# Healthcare Billing Foundations
+# Foundation to US Healthcare
 
 A self-paced, no-build course in plain HTML, CSS and JavaScript. It can be hosted from this folder as-is.
 
@@ -31,6 +31,7 @@ GitHub Pages is public by default, regardless of repository privacy or paid plan
 - Reflections and selected practice explanations require at least 20 characters and cannot be skipped.
 - Coaching key points appear after submitted work.
 - Each module contains a lesson acknowledgement checkbox, practice, a two-question check for understanding and a reflection.
+- The payer module covers Medicare and Medicaid delivery, military and veteran programs, common HMO/PPO/EPO/POS patterns, coordination of benefits, liability coverage, and the distinction between insurance payers and HSA/FSA funding accounts.
 - The graded knowledge check contains 20 questions and requires 80% to pass.
 - The certificate downloads as a PNG. The PDF learning record includes a completion-verification summary plus every module acknowledgement, learning objective, key-concept reminder, activity response and attempt, required explanation, check-for-understanding answer and attempt, reflection, coaching reminder and graded knowledge-check attempt.
 - PDF export loads jsPDF from a CDN and therefore requires an internet connection. The rest of the course uses local assets, apart from learner-selected official reference links.
