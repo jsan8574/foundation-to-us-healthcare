@@ -26,12 +26,13 @@ GitHub Pages is public by default, regardless of repository privacy or paid plan
 ## Course Behavior
 
 - Progress, answers, reflections, required explanations, assessment attempts, the learner name and active-learning time are stored in the current browser with `localStorage`.
+- A learner name is required before the course opens. The same saved name appears on the certificate and PDF learning record.
 - The timer counts only while the page is visible, focused and recently active. It excludes long gaps and pauses after 90 seconds of inactivity.
 - Reflections and selected practice explanations require at least 20 characters and cannot be skipped.
 - Coaching key points appear after submitted work.
 - Each module contains a lesson acknowledgement checkbox, practice, a two-question check for understanding and a reflection.
 - The graded knowledge check contains 20 questions and requires 80% to pass.
-- The certificate downloads as a PNG. The learning record exports as a PDF.
+- The certificate downloads as a PNG. The PDF learning record includes a completion-verification summary plus every module acknowledgement, learning objective, key-concept reminder, activity response and attempt, required explanation, check-for-understanding answer and attempt, reflection, coaching reminder and graded knowledge-check attempt.
 - PDF export loads jsPDF from a CDN and therefore requires an internet connection. The rest of the course uses local assets, apart from learner-selected official reference links.
 
 To reset a learner's progress for testing, clear site data for the preview or deployed address in the browser. Progress does not sync between browsers, devices or domains.

@@ -27,3 +27,12 @@ h1,h2,h3,.nav-btn strong,.journey strong,.flip strong,.bucket-button,.form-promp
 .locator-choice{margin:0;align-items:center;justify-content:center;min-height:64px;font-size:20px;font-weight:700}
 @media(max-width:1100px) and (min-width:761px){.panel-toggle{left:calc(5vw + 223px)}}
 @media(max-width:760px){.topbar{height:78px}.course-title{font-size:17px;max-width:210px;line-height:1.2}.panel-toggle{top:92px;left:auto;right:14px}.collapsed .panel-toggle{left:10px;right:auto}.layout{margin-top:22px}.lesson-header{padding-top:34px}.form-resource .actions{align-items:stretch}.form-resource .btn{width:100%}.form-question{grid-template-columns:1fr 1fr}}
+
+.name-gate{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:24px;background:#0c263cbb;backdrop-filter:blur(10px)}
+.name-gate[hidden]{display:none}
+.name-gate-card{width:min(560px,100%);padding:36px;background:white;border:1px solid #d5e4ec;border-radius:20px;box-shadow:0 24px 80px #07192555}
+.name-gate-card h2{margin-bottom:12px}
+.name-gate-card input{margin-bottom:14px}
+.name-gate-card .btn{width:100%;margin-top:8px}
+.name-required{overflow:hidden}
+@media(max-width:760px){.name-gate{padding:16px}.name-gate-card{padding:28px 22px;border-radius:16px}}
