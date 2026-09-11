@@ -119,9 +119,9 @@ window.COURSE = {
  ['Which electronic transaction is institutional?',['837I','837P','835'],0,'837I is institutional, 837P is professional, and 835 is remittance information.']
  ],reflection:'Name one similarity and one difference between professional and institutional claims.'},
  {id:'rcm',title:'Revenue Cycle Management Overview',short:'RCM Overview',time:10,kicker:'The Capstone: Connect Every Function',objective:'Identify the main Patient Access, mid-cycle and back-end functions and explain how they work together to support a complete and accurate revenue cycle.',intro:'Revenue Cycle Management (RCM) is the connected financial process that begins before a patient receives care and continues until payer and patient balances are resolved.',rcmStages:[
- {stage:'Front End',title:'Patient Access',summary:'Prepare the patient, coverage and account before or at the point of care.',functions:[['Scheduling','Arranges the service and captures the information needed to begin the encounter.'],['Intake','Collects the patient, contact, coverage and reason-for-visit information.'],['Registration','Creates or updates the patient and encounter record using accurate demographic and insurance data.'],['Prior Authorization','Obtains required payer approval before a service when the plan requires it; authorization does not guarantee payment.'],['Verification Of Benefits And Eligibility','Confirms active coverage for the date of service and reviews the plan benefits that may apply.'],['Cost Estimate','Uses available benefit and service information to estimate the patient’s expected financial responsibility.']]},
- {stage:'Mid-Cycle',title:'Turn Care Into Billable Information',summary:'Translate documented care into accurate codes and charges.',functions:[['Medical Coding','Assigns diagnosis and procedure codes supported by the health record and applicable coding rules.'],['Charge Entry','Records billable services, units and charges so they can move into claim creation.']]},
- {stage:'Back End',title:'Billing And Account Resolution',summary:'Submit claims, record outcomes and work remaining balances to resolution.',functions:[['Billing','Creates, validates and submits claims with the required patient, provider, service and payer information.'],['Payment Posting','Records payer and patient payments, adjustments and remittance details against the correct account.'],['Collections','Follows outstanding balances and takes the appropriate next action toward resolution.'],['Denial Management','Identifies why a claim was denied, corrects or appeals when appropriate and uses trends to prevent recurrence.'],['Self-Pay Or Patient Services','Communicates patient balances, answers billing questions and supports payment or approved financial-assistance options.']]}
+ {stage:'Front End',title:'Patient Access',summary:'Prepare the patient, coverage and account before or at the point of care.',functions:[['Scheduling','Arranges the service and captures the information needed to begin the encounter.','Maria’s imaging appointment is reserved for March 10.'],['Intake','Collects the patient, contact, coverage and reason-for-visit information.','Maria provides her contact details, insurance card and reason for the visit.'],['Registration','Creates or updates the patient and encounter record using accurate demographic and insurance data.','Staff confirm Maria’s address, member ID and subscriber before creating the encounter.'],['Prior Authorization','Obtains required payer approval before a service when the plan requires it; authorization does not guarantee payment.','The payer approves the requested MRI for the specified provider and dates.'],['Verification Of Benefits And Eligibility','Confirms active coverage for the date of service and reviews the plan benefits that may apply.','The response shows active coverage and a diagnostic-imaging coinsurance benefit for March 10.'],['Cost Estimate','Uses available benefit and service information to estimate the patient’s expected financial responsibility.','Maria receives an estimate based on the expected allowed amount and her remaining deductible.']]},
+ {stage:'Mid-Cycle',title:'Turn Care Into Billable Information',summary:'Translate documented care into accurate codes and charges.',functions:[['Medical Coding','Assigns diagnosis and procedure codes supported by the health record and applicable coding rules.','The coder assigns the supported diagnosis and imaging procedure codes from the completed record.'],['Charge Entry','Records billable services, units and charges so they can move into claim creation.','One completed imaging service and its charge are entered for billing.']]},
+ {stage:'Back End',title:'Billing And Account Resolution',summary:'Submit claims, record outcomes and work remaining balances to resolution.',functions:[['Billing','Creates, validates and submits claims with the required patient, provider, service and payer information.','A validated claim for Maria’s imaging service is sent to the correct payer.'],['Payment Posting','Records payer and patient payments, adjustments and remittance details against the correct account.','The payer payment, contractual adjustment and coinsurance are posted from the remittance.'],['Collections','Follows outstanding balances and takes the appropriate next action toward resolution.','A specialist reviews an unpaid balance and follows up with the responsible payer.'],['Denial Management','Identifies why a claim was denied, corrects or appeals when appropriate and uses trends to prevent recurrence.','A denied line is researched, corrected with the required information and resubmitted when appropriate.'],['Self-Pay Or Patient Services','Communicates patient balances, answers billing questions and supports payment or approved financial-assistance options.','A representative explains Maria’s statement and available approved payment options.']]}
  ],sections:[
  ['Patient Access Creates The Financial Foundation','Patient Access includes Scheduling, Intake, Registration, Prior Authorization, Verification of Benefits and Eligibility, and Cost Estimate. Accuracy here supports appropriate access to care and cleaner downstream billing. A wrong member ID, missed authorization or incomplete registration can delay or prevent reimbursement.'],
  ['The Mid-Cycle Converts Care Into Charges','Medical Coding translates the documented encounter into diagnosis and procedure codes. Charge Entry records the services, units and charges that will become billable claim information. Documentation must support both functions; a service that is undocumented, miscoded or missing from charge entry can produce an inaccurate claim.'],
@@ -131,6 +131,80 @@ window.COURSE = {
  ['Which set contains only Patient Access functions?',['Scheduling, Registration and Verification of Benefits and Eligibility','Medical Coding, Charge Entry and Billing','Payment Posting, Collections and Denial Management'],0,'Patient Access prepares the patient, coverage and account through functions such as Scheduling, Intake, Registration, Prior Authorization, benefit and eligibility verification, and Cost Estimate.'],
  ['Where do Medical Coding and Charge Entry belong in this course’s RCM model?',['Patient Access','Mid-Cycle','Back End'],1,'Medical Coding and Charge Entry convert documented care into coded, billable information before billing submits the claim.']
  ],reflection:'Choose one patient encounter and trace it through at least one Patient Access function, one mid-cycle function and two back-end functions. What information passes from one function to the next?'}
+ ]
+};
+COURSE.sectionExamples={
+ privacy:[
+  'A billing specialist sees a patient name, member ID, diagnosis and payment amount on an assigned claim. Because the details identify a person and relate to care and payment, the specialist treats them as PHI.',
+  'To research a missing payment, the specialist opens the assigned claim and remittance details needed for that task instead of browsing unrelated clinical notes.',
+  'Before sending requested claim information through an approved payer portal, the specialist verifies the payer contact, the account and the specific documents required.'
+ ],
+ relationship:[
+  'Maria receives a cardiology consultation, the cardiologist documents and bills the service, and Maria’s health plan evaluates the resulting claim.',
+  'A professional claim reports Maria as the patient, the cardiologist as the rendering provider, the consultation procedure, the diagnosis supporting the visit, the date of service and the payer being billed.',
+  'The provider bills $300, the plan allows $220, pays $176 and assigns $44 as coinsurance. The payer payment and Maria’s responsibility resolve different portions of the same allowed amount.'
+ ],
+ patient:[
+  'Maria is the patient and dependent, Daniel is the subscriber, and the account identifies Daniel as guarantor. These roles are verified separately because a subscriber is not automatically the guarantor.',
+  'At scheduling, Maria provides the reason for her visit. At registration, staff confirm her address, member ID and subscriber. The system assigns an encounter account while her MRN continues to identify her medical record. An eligibility response confirms active coverage and the benefits response describes the specialist copay.',
+  'Maria’s office consultation on March 10 is an outpatient encounter with March 10 as the Date of Service. A later formally admitted hospital stay has admission and discharge dates, while the hospital claim may show a statement period covering several dates.',
+  'Maria pays a monthly premium to maintain coverage. Her plan may require a $500 deductible, a $30 specialist copay and 20% coinsurance until applicable in-network spending reaches the plan’s out-of-pocket maximum.',
+  'For a covered service with a $1,000 allowed amount, a met deductible, no copay and 20% coinsurance, Maria owes $200 and the plan portion is $800.'
+ ],
+ providers:[
+  'A family-medicine physician sees Maria in a clinic, a radiologist interprets her imaging, and a hospital provides the facility, nursing and equipment for a later inpatient stay.',
+  'Maria’s PCP manages routine care, a cardiologist evaluates her heart condition, a radiologist reads an echocardiogram and an anesthesiologist supports a surgical procedure.',
+  'Maria’s PCP refers her to a cardiologist. The cardiologist orders an imaging test, a radiologist renders the interpretation, the radiology group bills it, and the hospitalist is the attending provider during an admission.',
+  'The cardiologist’s NPI identifies the healthcare provider, while the physician group’s TIN identifies the taxpayer. A claim may report an evaluation and management service plus a diagnostic test.'
+ ],
+ payers:[
+  'A 70-year-old may have Original Medicare, a child may have a state Medicaid managed-care plan, an employee may have commercial employer coverage, and an eligible military family member may use TRICARE. The exact program and plan determine the next billing check.',
+  'After an inpatient hospital stay, Part A may apply to the facility services while Part B may apply to a physician’s professional service. Another beneficiary may receive Medicare benefits through a Medicare Advantage plan and prescription coverage through that plan or Part D.',
+  'A member presents a state Medicaid ID, but the eligibility response shows enrollment in a contracted managed-care organization. The provider verifies that MCO and sends the claim according to its network and authorization rules.',
+  'An eligible TRICARE beneficiary follows the rules of the selected TRICARE plan. A CHAMPVA beneficiary is verified through that program. A Veteran receiving authorized community care is matched to the VA referral, approved service and approved dates.',
+  'An HMO member may need a PCP referral before seeing a specialist. A PPO member may use an out-of-network specialist at a higher cost. An EPO member generally stays in network except for emergencies, while a POS plan may combine network benefits with referral requirements.',
+  'Eligibility confirms that Maria’s plan is active on March 10. Benefits show specialist coverage and cost sharing. A referral directs her to cardiology, while prior authorization approves a required imaging service. None of these checks alone promises payment.',
+  'Maria’s employer plan is primary and her spouse’s plan is secondary under Coordination of Benefits. Her HSA may later help pay an eligible patient balance, but it does not adjudicate the insurance claim.',
+  'A provider bills $500, the contracted plan allows $320, applies a $180 contractual adjustment, pays $256 and assigns $64 as coinsurance. The remittance, contract and plan rules support each amount.'
+ ],
+ lifecycle:[
+  'A clinician completes Maria’s consultation and documents it. The billing system then combines patient, provider, diagnosis, procedure, date and charge information to generate the claim.',
+  'The provider sends the claim through a clearinghouse. The payer receives it, applies coverage and payment rules, and decides the allowed amount, payment, adjustments and patient responsibility.',
+  'The payer sends an ERA to the provider and an EOB to Maria explaining the processed claim. The electronic payment arrives separately and is posted to the account.',
+  'A claim missing a required member ID may be rejected before adjudication and corrected for resubmission. A claim denied after adjudication may require correction, additional documentation or an appeal, depending on the reason.'
+ ],
+ billing:[
+  'The cardiologist reports the professional evaluation and interpretation on a CMS-1500 or 837P, including the rendering provider and service-line details.',
+  'The hospital reports the facility, nursing, equipment and departmental services on a UB-04 or 837I using institutional information such as Type of Bill and revenue codes.',
+  'For one emergency visit, the hospital may bill the facility component and the emergency physician group may bill the professional component. Matching dates alone do not make the claims duplicates.'
+ ],
+ pb:[
+  'CMS-1500 box 2 identifies Maria as the patient, box 1a reports the insured ID, box 24J identifies the rendering provider and box 33 identifies the billing provider.',
+  'An ICD-10-CM diagnosis explains why Maria was evaluated, while a CPT code reports what professional service the clinician performed. A modifier may add a relevant circumstance without replacing the procedure code.',
+  'Box 24A reports the Date of Service, box 24B reports Place of Service, box 24G reports units and box 24F reports the line charge for the professional service.',
+  'A learner opens the supplied first page and finds the patient name in box 2, diagnosis information in box 21 and the billing provider area in box 33.'
+ ],
+ hb:[
+  'A hospital claim uses the statement From and Through dates to describe the billing period and the admission date to show when an inpatient stay began. These dates may differ.',
+  'A Type of Bill can describe the facility category, bill classification and frequency, while patient status reports the patient’s disposition, such as discharge to home.',
+  'A room-and-board revenue code categorizes the facility service. A HCPCS code may identify a specific outpatient service, while service units and line charges report quantity and amount.',
+  'The hospital reports its billing-provider NPI and the attending provider. For an eligible inpatient stay, a DRG may group the case for reimbursement based on clinical and other factors.',
+  'The UB-04 can show the statement period in FL 6, admission date in FL 12, discharge hour in FL 16 and patient status in FL 17. Patient status is not a separate discharge-date field.'
+ ],
+ forms:[
+  'To answer where the rendering provider identifier belongs, the learner opens the supplied CMS-1500 first page, scans the numbered service-line boxes and selects box 24J in the course.',
+  'On the supplied UB-04, the learner distinguishes FL 6 for the statement period from FL 12 for admission date and FL 17 for patient status before answering.'
+ ],
+ compare:[
+  'Both a professional claim and an institutional claim can report Maria’s name, diagnosis, service date, units and charges even though those details appear in different locations.',
+  'A cardiologist’s professional claim uses CMS-1500 or 837P and reports Place of Service and rendering-provider details for the consultation.',
+  'The hospital’s institutional claim uses UB-04 or 837I and may report Type of Bill, revenue codes and patient status for the related facility encounter.'
+ ],
+ rcm:[
+  'Patient Access schedules Maria’s imaging, completes intake and registration, verifies active coverage and benefits, obtains required authorization and provides a cost estimate before the service.',
+  'After the imaging is documented, Medical Coding assigns the supported codes and Charge Entry records the service, units and charge for claim creation.',
+  'Billing submits the claim, Payment Posting records the remittance, Denial Management works a denied line, Collections follows the unresolved balance, and Patient Services explains an eligible self-pay amount to Maria.',
+  'If Billing discovers an invalid member ID, the team traces it to Registration, corrects the account and shares the finding so Patient Access can prevent similar downstream rejections.'
  ]
 };
 COURSE.forms=[

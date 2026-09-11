@@ -24,6 +24,9 @@ h1,h2,h3,.nav-btn strong,.journey strong,.flip strong,.bucket-button,.form-promp
 .acknowledge:has(input:checked){border-color:#92c7b5;background:#edf8f3;color:#175c44}
 .acknowledge input{width:20px;height:20px;accent-color:var(--green)}
 .activity-explanation{margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
+.concept-example{margin-top:16px;padding:16px 18px;border-left:3px solid var(--cyan);border-radius:0 10px 10px 0;background:#f0f8fa}
+.concept-example strong{display:block;color:var(--teal);font-size:13px;letter-spacing:.8px;text-transform:uppercase;margin-bottom:4px}
+.concept-example p{color:#284b60;font-size:16px;line-height:1.45}
 .rcm-map{display:grid;grid-template-columns:minmax(0,1fr) 26px minmax(0,1fr) 26px minmax(0,1fr);align-items:start;margin:20px 0 30px}
 .rcm-stage{border:1px solid #c7dce5;border-radius:16px;overflow:hidden;background:#fbfdfe;box-shadow:0 7px 20px #15384f0b}
 .rcm-stage-heading{min-height:178px;padding:22px;background:#eaf6f8;border-bottom:1px solid #c7dce5}
@@ -37,6 +40,8 @@ h1,h2,h3,.nav-btn strong,.journey strong,.flip strong,.bucket-button,.form-promp
 .rcm-function:first-child{border-top:0}
 .rcm-function strong{display:block;color:var(--navy);font-size:17px;line-height:1.25;margin-bottom:5px}
 .rcm-function span{display:block;color:var(--muted);font-size:14px;line-height:1.4}
+.rcm-function em{display:block;margin-top:8px;padding-top:8px;border-top:1px dashed #d7e5eb;color:#365b6f;font-size:13px;line-height:1.4;font-style:normal}
+.rcm-function em b{color:var(--teal)}
 .rcm-arrow{display:grid;place-items:center;color:var(--teal);font-size:23px;padding-top:76px}
 .form-resource{padding:22px;border:1px solid var(--line);border-radius:14px;background:#f8fbfd;margin-bottom:18px}
 .form-resource h3{margin-bottom:8px}
