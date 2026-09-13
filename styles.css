@@ -34,8 +34,9 @@ h1,h2,h3,.nav-btn strong,.journey strong,.flip strong,.bucket-button,.form-promp
 .workbook-number{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:var(--deep);color:white;font-size:14px;font-weight:700;letter-spacing:.5px}
 .workbook-item textarea{min-height:150px}
 .concept-example{margin-top:16px;padding:16px 18px;border-left:3px solid var(--cyan);border-radius:0 10px 10px 0;background:#f0f8fa}
-.concept-example strong{display:block;color:var(--teal);font-size:13px;letter-spacing:.8px;text-transform:uppercase;margin-bottom:4px}
+.concept-example>strong{display:block;color:var(--teal);font-size:13px;letter-spacing:.8px;text-transform:uppercase;margin-bottom:4px}
 .concept-example p{color:#284b60;font-size:16px;line-height:1.45}
+.concept-example p .key-term{display:inline;color:#103f58;font-size:inherit;letter-spacing:normal;text-transform:none;margin:0}
 .rcm-map{display:grid;grid-template-columns:minmax(0,1fr) 26px minmax(0,1fr) 26px minmax(0,1fr);align-items:start;margin:20px 0 30px}
 .rcm-stage{border:1px solid #c7dce5;border-radius:16px;overflow:hidden;background:#fbfdfe;box-shadow:0 7px 20px #15384f0b}
 .rcm-stage-heading{min-height:178px;padding:22px;background:#eaf6f8;border-bottom:1px solid #c7dce5}
