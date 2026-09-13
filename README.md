@@ -14,26 +14,27 @@ Then open `http://127.0.0.1:8765/`. Opening `index.html` directly may restrict b
 
 ## Publish To Personal GitHub Pages
 
-The intended public address is `https://jsan8574.github.io/REPOSITORY-NAME/`.
+The published public address is `https://jsan8574.github.io/foundation-to-us-healthcare/`.
 
 1. Create a repository in the `jsan8574` GitHub account.
 2. Add that repository as this folder's remote and push the committed files.
 3. In the repository, open **Settings → Pages**.
 4. Choose **Deploy from a branch**, select the published branch and the root folder, then save.
 
-GitHub Pages is public by default, regardless of repository privacy or paid plan. Do not publish patient information, credentials or other private data. No remote repository was created and nothing was pushed as part of this delivery.
+GitHub Pages is public by default, regardless of repository privacy or paid plan. Do not publish patient information, credentials or other private data.
 
 ## Course Behavior
 
 - Progress, answers, reflections, required explanations, assessment attempts, the learner name and active-learning time are stored in the current browser with `localStorage`.
 - A learner name is required before the course opens. The same saved name appears on the certificate and PDF learning record.
 - The timer counts only while the page is visible, focused and recently active. It excludes long gaps and pauses after 90 seconds of inactivity.
-- Reflections and selected practice explanations require at least 20 characters and cannot be skipped.
-- Coaching key points appear after submitted work.
-- Each module contains a lesson acknowledgement checkbox, practice, a two-question check for understanding and a reflection.
+- Reflections, selected practice explanations and workbook responses require at least 20 characters and cannot be skipped.
+- Workbook activities adapted from the supplied Day 1 and Day 2 self-learning workbooks cover all distinct topics that were not already addressed by an existing course activity.
+- Coaching key points appear only after the related written work is submitted.
+- Each module contains a lesson acknowledgement checkbox, required practice, a two-question check for understanding and a required reflection.
 - The payer module covers Medicare and Medicaid delivery, military and veteran programs, common HMO/PPO/EPO/POS patterns, coordination of benefits, liability coverage, and the distinction between insurance payers and HSA/FSA funding accounts.
 - The graded knowledge check contains 20 questions and requires 80% to pass.
-- The certificate downloads as a PNG. The PDF learning record includes a completion-verification summary plus every module acknowledgement, learning objective, key-concept reminder, activity response and attempt, required explanation, check-for-understanding answer and attempt, reflection, coaching reminder and graded knowledge-check attempt.
+- The certificate downloads as a PNG. The PDF learning record includes a completion-verification summary plus every module acknowledgement, learning objective, key-concept reminder, activity response and attempt, workbook prompt and learner response, required explanation, check-for-understanding answer and attempt, reflection, coaching reminder and graded knowledge-check attempt.
 - PDF export loads jsPDF from a CDN and therefore requires an internet connection. The rest of the course uses local assets, apart from learner-selected official reference links.
 
 To reset a learner's progress for testing, clear site data for the preview or deployed address in the browser. Progress does not sync between browsers, devices or domains.
