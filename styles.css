@@ -83,14 +83,12 @@ h1,h2,h3,.nav-btn strong,.journey strong,.flip strong,.bucket-button,.form-promp
 .lesson-reveal[open] summary::before{content:'−'}
 .lesson-reveal summary span{flex:1}
 .lesson-reveal summary small{color:var(--teal);font-size:12px;letter-spacing:.7px;text-transform:uppercase;white-space:nowrap}
-.lesson-reveal[open] summary small{font-size:0}
-.lesson-reveal[open] summary small::after{content:'Answer Revealed';font-size:12px}
 .lesson-reveal-body{padding:20px 22px 22px}
 .lesson-reveal-body>p{margin:0;font-size:17px;line-height:1.65}
 .scenario-visual{margin:12px 0 20px;border:1px solid #cbdde5;border-radius:14px;overflow:hidden;background:#edf5f7}
 .scenario-visual img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain}
 .scenario-visual figcaption{padding:9px 14px;background:white;color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase}
-.eob-lab{margin-top:34px;padding-top:30px;border-top:1px solid var(--line)}
+.eob-lab{margin:0}
 .eob-lab>h2{margin-bottom:8px}
 .eob-sheet{margin:20px 0 28px;border:1px solid #b9cfd9;border-radius:16px;overflow:hidden;background:white;box-shadow:0 8px 28px #15384f10}
 .eob-banner{display:flex;justify-content:space-between;gap:24px;padding:22px 24px;background:var(--deep);color:white}
@@ -102,6 +100,8 @@ h1,h2,h3,.nav-btn strong,.journey strong,.flip strong,.bucket-button,.form-promp
 .eob-meta small{color:var(--teal)}
 .eob-meta strong,.eob-meta span{display:block}
 .eob-meta strong{margin:5px 0;font-size:16px}.eob-meta span{color:var(--muted);font-size:13px;line-height:1.4}
+.eob-plan{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#d9e6ec;border-top:1px solid #d9e6ec}
+.eob-plan span{padding:14px 18px;background:#f7fafb}.eob-plan small{display:block;color:var(--teal);font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase}.eob-plan strong{display:block;margin-top:4px;font-size:14px}
 .eob-table-wrap{overflow-x:auto}
 .eob-table{width:100%;min-width:940px;border-collapse:collapse;font-size:13px}
 .eob-table th,.eob-table td{padding:12px 10px;border-bottom:1px solid #dce7ec;text-align:right;white-space:nowrap}
@@ -111,7 +111,11 @@ h1,h2,h3,.nav-btn strong,.journey strong,.flip strong,.bucket-button,.form-promp
 .eob-payment{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#d9e6ec;border-top:1px solid #d9e6ec}
 .eob-payment span{padding:16px 18px;background:#f7fafb}.eob-payment small{color:var(--teal)}.eob-payment strong{display:block;margin-top:5px;font-size:15px}
 .eob-key{margin:0;padding:14px 20px;background:#fff7e8;color:#66410a;font-size:14px}
+.eob-formula{display:grid;grid-template-columns:1fr;gap:7px;margin:22px 0;padding:18px 20px;border:1px solid #c8dde5;border-radius:12px;background:#f0f7f9}.eob-formula strong{color:var(--teal);font-size:13px;letter-spacing:.8px;text-transform:uppercase}.eob-formula span{font-size:15px;color:#284b60}
 .eob-questions{margin-top:26px}
+.eob-calculations{margin:30px 0}.eob-calculations>p{color:var(--muted);font-size:15px}
+.eob-calc{display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:14px 20px;align-items:center;padding:18px 0;border-top:1px solid #e0eaef}.eob-calc label strong,.eob-calc label span{display:block}.eob-calc label strong{margin-bottom:5px}.eob-calc label span{color:var(--muted);font-size:15px;line-height:1.45}.eob-calc .feedback{grid-column:1/-1;margin:0}
+.money-entry{display:flex;align-items:center;border:1px solid #aabfce;border-radius:10px;background:#fbfdfe;overflow:hidden}.money-entry>span{padding-left:13px;color:var(--muted);font-weight:700}.money-entry input{border:0;border-radius:0;padding-left:6px;font-size:18px;font-weight:600}.money-entry input:focus{outline:2px solid var(--teal);outline-offset:-2px}
 .rcm-flip-board{display:grid;grid-template-columns:minmax(0,1fr) 25px minmax(0,1fr) 25px minmax(0,1fr);align-items:start;margin:20px 0 30px}
 .rcm-lane{border:1px solid #c7dce5;border-radius:16px;background:#fbfdfe;overflow:hidden;box-shadow:0 7px 20px #15384f0b}
 .rcm-lane>header{padding:20px;background:#eaf6f8}.rcm-stage-2>header{background:#eef3f9}.rcm-stage-3>header{background:#edf8f3}
@@ -119,7 +123,7 @@ h1,h2,h3,.nav-btn strong,.journey strong,.flip strong,.bucket-button,.form-promp
 .rcm-flips{padding:10px}
 .rcm-flip{margin:8px 0;border:1px solid #d1e1e7;border-radius:11px;background:white;overflow:hidden}
 .rcm-flip summary{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:62px;padding:13px 14px;list-style:none;color:var(--navy);font-weight:700}
-.rcm-flip summary::-webkit-details-marker{display:none}.rcm-flip summary small{color:var(--teal);font-size:10px;text-transform:uppercase;letter-spacing:.6px;text-align:right}.rcm-flip[open] summary{background:#e9f7f6}.rcm-flip[open] summary small{font-size:0}.rcm-flip[open] summary small::after{content:'Flipped';font-size:10px}
+.rcm-flip summary::-webkit-details-marker{display:none}.rcm-flip[open] summary{background:#e9f7f6}
 .rcm-flip>div{padding:14px;border-top:1px solid #d7e5eb}.rcm-flip p{font-size:14px;line-height:1.45}.rcm-example{margin-top:9px;padding-top:9px;border-top:1px dashed #d7e5eb;color:#365b6f}
 @media(max-width:1100px){.rcm-flip-board{grid-template-columns:1fr}.rcm-flip-board>.rcm-arrow{padding:5px;transform:rotate(90deg)}}
-@media(max-width:760px){.lesson-reveal summary{align-items:flex-start;min-height:68px;padding:16px;font-size:18px}.lesson-reveal summary small{display:none}.lesson-reveal-body{padding:17px}.scenario-visual img{max-height:none}.eob-banner{display:block}.eob-banner div:last-child{text-align:left;margin-top:15px}.eob-meta,.eob-payment{grid-template-columns:1fr}.eob-meta>div,.eob-payment span{padding:14px 16px}}
+@media(max-width:760px){.lesson-reveal summary{align-items:flex-start;min-height:68px;padding:16px;font-size:18px}.lesson-reveal summary small{display:none}.lesson-reveal-body{padding:17px}.scenario-visual img{max-height:none}.eob-banner{display:block}.eob-banner div:last-child{text-align:left;margin-top:15px}.eob-meta,.eob-plan,.eob-payment{grid-template-columns:1fr}.eob-meta>div,.eob-plan span,.eob-payment span{padding:14px 16px}.eob-calc{grid-template-columns:1fr}.money-entry{max-width:180px}}

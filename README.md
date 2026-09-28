@@ -33,9 +33,9 @@ GitHub Pages is public by default, regardless of repository privacy or paid plan
 - Coaching key points appear only after the related written work is submitted.
 - Dense lesson content is presented as question-led reveal cards so learners can explore one idea at a time.
 - Selected written activities include fictional insurance-card, clinic-record and hospital-record illustrations. All names, identifiers and amounts in these visuals are invented for training.
-- The Claim Life Cycle module includes a required fictional EOB interpretation activity with line-level revenue codes, HCPCS, modifiers, adjustments, payer payment and patient responsibility.
+- The Claim Life Cycle module includes a required fictional EOB interpretation and calculation activity with line-level revenue codes, HCPCS, modifiers, allowed amounts, contractual adjustments, coinsurance, payer payment, patient responsibility and claim reconciliation.
 - The claim-form navigation lab uses six quick locator questions per supplied first-page form.
-- The RCM overview uses function flip cards and a connect-the-dots handoff sequence.
+- The RCM overview uses expandable function cards and a connect-the-dots handoff sequence.
 - Each module contains a lesson acknowledgement checkbox, required practice, a two-question check for understanding and a required reflection.
 - The payer module covers Medicare and Medicaid delivery, military and veteran programs, common HMO/PPO/EPO/POS patterns, coordination of benefits, liability coverage, and the distinction between insurance payers and HSA/FSA funding accounts.
 - The graded knowledge check contains 20 questions and requires 80% to pass.

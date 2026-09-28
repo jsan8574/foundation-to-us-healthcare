@@ -273,9 +273,7 @@ COURSE.workbookActivities={
  hb:[
   {title:'Read A Facility Encounter',prompt:'A hospital stay has an admission date, statement From and Through dates, Type of Bill, patient status, revenue-code lines and an attending provider. Explain what each element contributes and which items should not be treated as interchangeable.',coaching:'Admission date starts the admission; statement dates define the billing period; Type of Bill classifies the institutional claim; patient status reports disposition; revenue codes categorize facility services; and the attending provider identifies a care role. Statement-through date, discharge hour and patient status answer different questions.'}
  ],
- rcm:[
-  {title:'Choose Your Revenue-Cycle Lane',prompt:'Choose one area—intake or scheduling, benefit verification, authorization, coding or charge entry, billing, payment posting, denial management, collections, or patient services. Explain what interests you and name one skill you would build next.',coaching:'Connect the role to its place in the cycle and a concrete skill: accurate registration, payer research, clinical-document review, coding literacy, claim validation, remittance interpretation, root-cause analysis, timely follow-up or clear patient communication.'}
- ]
+ rcm:[]
 };
 COURSE.keyTerms=['protected health information','minimum necessary','Affordable Care Act','COBRA','MHPAEA','No Surprises Act','EMTALA','medical screening examination','stabilizing treatment','patient','subscriber','dependent','guarantor','insured','insurer','insurance','self-pay','Assignment of Benefits','Release of Information','new patient','established patient','scheduling','registration','member ID','group number','MRN','account number','eligibility','benefits','encounter','Date of Service','inpatient','outpatient','admission date','discharge status','statement dates','premium','deductible','copay','coinsurance','out-of-pocket maximum','provider','primary care provider','referring provider','ordering provider','rendering provider','billing provider','attending provider','specialist','NPI','TIN','EIN','symptom','diagnosis','procedure','Evaluation and Management','DME','Medicare','Medicaid','Medicare Advantage','Medigap','TRICARE','CHAMPVA','HMO','PPO','EPO','POS','referral','prior authorization','retro authorization','medical necessity','Utilization Review','Referral Authorization Number','Coordination of Benefits','HSA','FSA','Advance Beneficiary Notice of Noncoverage','allowed amount','billed charge','contractual adjustment','patient responsibility','claim','claim scrubber','clearinghouse','clean claim','rejected claim','denied claim','EOB','ERA','CARC','RARC','EDI','IVR','reconsideration','appeal','Physician Billing','Hospital Billing','CMS-1500','UB-04','837P','837I','ICD-10-CM','CPT','HCPCS','modifier','diagnosis pointer','Place of Service','Type of Bill','revenue code','DRG','HIM','Medical Coding','Charge Entry','Revenue Integrity','Payment Posting','Collections','Denial Management'];
 COURSE.forms=[
@@ -324,12 +322,14 @@ COURSE.scenarioVisuals={
 };
 
 COURSE.eob={
+ revision:2,
  title:'Can You Read What The Payer Decided?',
  intro:'Use this fictional facility EOB to find the people, service lines, adjustments, payment and patient responsibility. The values are realistic training data and do not represent a real person or claim.',
  payer:'SummitCare Health PPO',claim:'SCH-7842196',processed:'September 18, 2026',
  patient:{name:'Maria Santos',member:'SC482917',group:'GRP-7788'},
  provider:{name:'Riverside Community Hospital',npi:'1982746301',tin:'84-3217654'},
  service:{dates:'September 10, 2026',type:'Outpatient Emergency Department'},
+ plan:{network:'In-Network',deductible:'Met Before This Claim',coinsurance:'20%',status:'Processed As Primary'},
  lines:[
   {rev:'0450',description:'Emergency Room',code:'99284',modifier:'25',billed:1450,allowed:900,adjustment:550,plan:720,reason:'PR-2',patient:180},
   {rev:'0300',description:'Laboratory',code:'80053',modifier:'—',billed:180,allowed:95,adjustment:85,plan:76,reason:'PR-2',patient:19},
@@ -343,6 +343,14 @@ COURSE.eob={
   ['Which revenue code identifies the emergency-room line?',['0300','0320','0450'],2,'Revenue code 0450 identifies the emergency-room service category on this training EOB.'],
   ['What does modifier TC communicate on the radiology line?',['Technical component','Telehealth claim','Total charge'],0,'TC identifies the technical component. Read it with HCPCS 71046 and revenue code 0320.'],
   ['Which figure shows the amount removed under the payer contract?',['$1,950 billed','$745 adjustment','$241 patient responsibility'],1,'The contractual adjustment is $745. It is distinct from both the plan payment and the patient amount.']
+ ],
+ calculations:[
+  ['Emergency-Room Allowed Amount','Subtract the $550 contractual adjustment from the $1,450 billed charge.',900,'$1,450 − $550 = $900 allowed.'],
+  ['Laboratory Allowed Amount','Subtract the $85 contractual adjustment from the $180 billed charge.',95,'$180 − $85 = $95 allowed.'],
+  ['Total Allowed Amount','Subtract the total contractual adjustment of $745 from the total billed charge of $1,950.',1205,'$1,950 − $745 = $1,205 total allowed. You can also add the three allowed line amounts.'],
+  ['Patient Coinsurance','The deductible was already met and the plan assigns 20% coinsurance. Calculate 20% of the $1,205 allowed amount.',241,'$1,205 × 20% = $241 patient coinsurance.'],
+  ['Plan Payment','Subtract the $241 patient responsibility from the $1,205 allowed amount.',964,'$1,205 − $241 = $964 plan payment.'],
+  ['Final Reconciliation','Add the contractual adjustment, plan payment and patient responsibility.',1950,'$745 + $964 + $241 = $1,950, which reconciles to the billed total.']
  ]
 };
 
