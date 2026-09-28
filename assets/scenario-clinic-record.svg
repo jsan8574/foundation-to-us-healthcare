@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Fictional clinic encounter record</title><desc id="desc">A training clinic record showing fictional patient, provider, visit, diagnosis and procedure information.</desc>
+  <rect width="960" height="600" rx="24" fill="#f4f8fa"/><rect x="24" y="24" width="912" height="552" rx="18" fill="white" stroke="#c8dce5" stroke-width="2"/>
+  <rect x="24" y="24" width="912" height="94" rx="18" fill="#12354d"/><rect x="24" y="92" width="912" height="26" fill="#12354d"/>
+  <circle cx="78" cy="70" r="25" fill="#35b7bd"/><path d="M78 55v30M63 70h30" stroke="white" stroke-width="7"/>
+  <text x="124" y="72" fill="white" font-family="Arial" font-size="30" font-weight="700">Riverside Cardiology Clinic</text><text x="124" y="98" fill="#bdeef0" font-family="Arial" font-size="17">FICTIONAL ENCOUNTER SNAPSHOT</text>
+  <g font-family="Arial"><g fill="#4d697a" font-size="16" font-weight="700"><text x="62" y="165">PATIENT</text><text x="355" y="165">DATE OF SERVICE</text><text x="650" y="165">ACCOUNT</text></g><g fill="#12354d" font-size="24"><text x="62" y="197">Maria Santos</text><text x="355" y="197">09/10/2026</text><text x="650" y="197">RC-209184</text></g>
+  <line x1="62" x2="898" y1="225" y2="225" stroke="#d9e6ec"/>
+  <g fill="#4d697a" font-size="16" font-weight="700"><text x="62" y="270">RENDERING PROVIDER</text><text x="530" y="270">PLACE OF SERVICE</text></g><g fill="#12354d" font-size="23"><text x="62" y="304">Dr. Lena Morgan • NPI 1457823096</text><text x="530" y="304">11 • Office</text></g>
+  <rect x="62" y="350" width="836" height="160" rx="14" fill="#eef7f8"/><text x="88" y="388" fill="#087e8b" font-size="17" font-weight="700">CLINICAL AND BILLING SUMMARY</text><text x="88" y="428" fill="#12354d" font-size="21">Symptom: intermittent palpitations</text><text x="88" y="463" fill="#12354d" font-size="21">Diagnosis: cardiac arrhythmia, unspecified</text><text x="88" y="498" fill="#12354d" font-size="21">Service: office E/M and ECG • Authorization: not required</text>
+  <text x="62" y="550" fill="#6a8290" font-size="15">Training illustration only • Contains no real patient information</text></g>
+</svg>

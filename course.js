@@ -308,3 +308,79 @@ COURSE.exam=[
  ['Where does charge capture sit in this course’s RCM model?',['Front end','Middle cycle','Back end'],1,'Charge capture translates delivered services into billable information.','RCM'],
  ['A registration error leads to a rejected claim. What is the best overall lesson?',['Only back-end teams influence payment','Intake information does not affect reimbursement','Earlier revenue-cycle work affects later claim outcomes'],2,'The stages are connected; upstream quality supports downstream processing.','RCM']
 ];
+
+// Interaction refinements for the guided, self-paced edition.
+COURSE.scenarioVisuals={
+ privacy:['assets/scenario-clinic-record.svg','assets/scenario-hospital-record.svg'],
+ relationship:['assets/scenario-clinic-record.svg','assets/scenario-insurance-card.svg'],
+ patient:['assets/scenario-insurance-card.svg','assets/scenario-clinic-record.svg','assets/scenario-insurance-card.svg'],
+ providers:['assets/scenario-clinic-record.svg','assets/scenario-clinic-record.svg'],
+ payers:['assets/scenario-insurance-card.svg','assets/scenario-hospital-record.svg','assets/scenario-insurance-card.svg'],
+ lifecycle:['assets/scenario-clinic-record.svg','assets/scenario-hospital-record.svg'],
+ billing:['assets/scenario-hospital-record.svg'],
+ pb:['assets/scenario-clinic-record.svg','assets/scenario-insurance-card.svg'],
+ hb:['assets/scenario-hospital-record.svg'],
+ rcm:['assets/scenario-hospital-record.svg']
+};
+
+COURSE.eob={
+ title:'Can You Read What The Payer Decided?',
+ intro:'Use this fictional facility EOB to find the people, service lines, adjustments, payment and patient responsibility. The values are realistic training data and do not represent a real person or claim.',
+ payer:'SummitCare Health PPO',claim:'SCH-7842196',processed:'September 18, 2026',
+ patient:{name:'Maria Santos',member:'SC482917',group:'GRP-7788'},
+ provider:{name:'Riverside Community Hospital',npi:'1982746301',tin:'84-3217654'},
+ service:{dates:'September 10, 2026',type:'Outpatient Emergency Department'},
+ lines:[
+  {rev:'0450',description:'Emergency Room',code:'99284',modifier:'25',billed:1450,allowed:900,adjustment:550,plan:720,reason:'PR-2',patient:180},
+  {rev:'0300',description:'Laboratory',code:'80053',modifier:'—',billed:180,allowed:95,adjustment:85,plan:76,reason:'PR-2',patient:19},
+  {rev:'0320',description:'Diagnostic Radiology',code:'71046',modifier:'TC',billed:320,allowed:210,adjustment:110,plan:168,reason:'PR-2',patient:42}
+ ],
+ payment:{method:'EFT',amount:964,date:'September 19, 2026',trace:'EFT-62018495'},
+ totals:{billed:1950,allowed:1205,adjustment:745,plan:964,patient:241},
+ questions:[
+  ['Which amount is the plan payment for this claim?',['$745','$964','$1,205'],1,'The plan paid $964. The $745 amount is the contractual adjustment, and $1,205 is the total allowed amount.'],
+  ['What does PR-2 assign to the patient on this EOB?',['Coinsurance totaling $241','The contractual adjustment of $745','The payer payment of $964'],0,'PR means patient responsibility; reason code 2 identifies coinsurance. The three line amounts total $241.'],
+  ['Which revenue code identifies the emergency-room line?',['0300','0320','0450'],2,'Revenue code 0450 identifies the emergency-room service category on this training EOB.'],
+  ['What does modifier TC communicate on the radiology line?',['Technical component','Telehealth claim','Total charge'],0,'TC identifies the technical component. Read it with HCPCS 71046 and revenue code 0320.'],
+  ['Which figure shows the amount removed under the payer contract?',['$1,950 billed','$745 adjustment','$241 patient responsibility'],1,'The contractual adjustment is $745. It is distinct from both the plan payment and the patient amount.']
+ ]
+};
+
+const lifecycleModule=COURSE.modules.find(module=>module.id==='lifecycle');
+lifecycleModule.eob=COURSE.eob;
+
+const rcmModule=COURSE.modules.find(module=>module.id==='rcm');
+rcmModule.activity={
+ revision:3,
+ type:'sequence',
+ title:'Connect The Dots Across The Revenue Cycle',
+ prompt:'Move the six dots into the order information usually travels. Each dot depends on the information created before it.',
+ items:['Registration And Eligibility Confirmed','Clinical Documentation Completed','Medical Coding Applied','Charges Entered','Claim Validated And Billed','Payment Posted Or Follow-Up Started'],
+ explanation:'Choose one handoff in this path. Explain what information moves forward and what could happen if it is incomplete.',
+ coaching:'Accurate Patient Access information supports documentation and coding. Coding and Charge Entry create billable data. Billing sends the claim, and payer results move to Payment Posting, Collections, Denial Management, or Patient Services. The cycle improves when downstream teams trace errors to their source.'
+};
+
+COURSE.forms.find(form=>form.id==='cms').prompts=[
+ ['Locate the name of the person receiving care.','2'],
+ ['Locate the insured identification number.','1a'],
+ ['Locate the diagnoses explaining why services occurred.','21'],
+ ['Locate the procedure code and modifier area.','24D'],
+ ['Locate the rendering provider identifier.','24J'],
+ ['Locate the billing provider or organization.','33']
+];
+COURSE.forms.find(form=>form.id==='ub').prompts=[
+ ['Locate the institutional bill type.','4'],
+ ['Locate the statement billing period.','6'],
+ ['Locate the patient discharge status.','17'],
+ ['Locate the revenue codes.','42'],
+ ['Locate the total charges for a service line.','47'],
+ ['Locate the payer name.','50']
+];
+
+COURSE.workbookActivities.patient[0].prompt='The fictional plan has a $40 office copay. Maria completes an eligible office visit. Explain the amount she should expect for this simplified scenario and what you would still verify before giving a final estimate.';
+COURSE.workbookActivities.patient[0].coaching='The starting estimate is the stated $40 office copay. Before treating it as final, verify active coverage for the Date of Service, the provider network, the exact benefit, whether the deductible or another rule applies, and any services billed separately.';
+COURSE.workbookActivities.patient[2].prompt='Using the fictional card, list five details you would confirm during registration and explain why one of them matters downstream.';
+COURSE.workbookActivities.payers[1].prompt='Choose one scenario: a planned outpatient MRI, an emergency admission, or a specialist visit under a referral-driven plan. State the next verification step and explain why.';
+COURSE.workbookActivities.payers[1].coaching='For a planned MRI, verify benefits, network and prior authorization. For an emergency admission, follow emergency notification and concurrent-review procedures after care begins. For a specialist visit, confirm referral, network and authorization requirements.';
+COURSE.workbookActivities.pb[1].prompt='Give a plain-language meaning and one short fictional example for five terms: NPI, EOB, ERA, CPT and Date of Service.';
+COURSE.workbookActivities.pb[1].coaching='NPI identifies the provider; an EOB explains processing to the member; an ERA gives remittance data to the provider; CPT identifies a professional service or procedure; and Date of Service states when care occurred.';

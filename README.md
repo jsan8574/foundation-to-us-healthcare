@@ -14,7 +14,7 @@ Then open `http://127.0.0.1:8765/`. Opening `index.html` directly may restrict b
 
 ## Publish To Personal GitHub Pages
 
-The published public address is `https://jsan8574.github.io/foundation-to-us-healthcare/`.
+The published public address is `https://ushealthcarefoundation.revexpertone.com/`. The GitHub Pages repository remains `jsan8574/foundation-to-us-healthcare`.
 
 1. Create a repository in the `jsan8574` GitHub account.
 2. Add that repository as this folder's remote and push the committed files.
@@ -31,6 +31,11 @@ GitHub Pages is public by default, regardless of repository privacy or paid plan
 - Reflections, selected practice explanations and workbook responses require at least 20 characters and cannot be skipped.
 - Workbook activities adapted from the supplied Day 1 and Day 2 self-learning workbooks cover all distinct topics that were not already addressed by an existing course activity.
 - Coaching key points appear only after the related written work is submitted.
+- Dense lesson content is presented as question-led reveal cards so learners can explore one idea at a time.
+- Selected written activities include fictional insurance-card, clinic-record and hospital-record illustrations. All names, identifiers and amounts in these visuals are invented for training.
+- The Claim Life Cycle module includes a required fictional EOB interpretation activity with line-level revenue codes, HCPCS, modifiers, adjustments, payer payment and patient responsibility.
+- The claim-form navigation lab uses six quick locator questions per supplied first-page form.
+- The RCM overview uses function flip cards and a connect-the-dots handoff sequence.
 - Each module contains a lesson acknowledgement checkbox, required practice, a two-question check for understanding and a required reflection.
 - The payer module covers Medicare and Medicaid delivery, military and veteran programs, common HMO/PPO/EPO/POS patterns, coordination of benefits, liability coverage, and the distinction between insurance payers and HSA/FSA funding accounts.
 - The graded knowledge check contains 20 questions and requires 80% to pass.

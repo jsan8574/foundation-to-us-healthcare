@@ -72,3 +72,54 @@ h1,h2,h3,.nav-btn strong,.journey strong,.flip strong,.bucket-button,.form-promp
 .name-required{overflow:hidden}
 @media(max-width:760px){.name-gate{padding:16px}.name-gate-card{padding:28px 22px;border-radius:16px}}
 @media(max-width:760px){.workbook-heading{padding:18px}.workbook-item{grid-template-columns:1fr;gap:11px}.workbook-number{width:38px;height:38px}.workbook-item textarea{min-height:170px}}
+
+/* Question-led reading, visual scenarios, EOB practice and RCM flip board */
+.reveal-guide{margin:0 0 18px;color:var(--muted);font-size:16px}
+.lesson-reveal{margin:12px 0;border:1px solid #cbdde5;border-radius:14px;background:#fbfdfe;overflow:hidden}
+.lesson-reveal summary{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px;padding:18px 20px;color:var(--navy);font-size:20px;font-weight:700;list-style:none}
+.lesson-reveal summary::-webkit-details-marker{display:none}
+.lesson-reveal summary::before{content:'+';display:grid;place-items:center;width:30px;height:30px;flex:0 0 30px;border-radius:50%;background:#e1f3f4;color:var(--teal);font-size:22px;font-weight:500}
+.lesson-reveal[open] summary{background:#eef8fa;border-bottom:1px solid #d4e5eb}
+.lesson-reveal[open] summary::before{content:'−'}
+.lesson-reveal summary span{flex:1}
+.lesson-reveal summary small{color:var(--teal);font-size:12px;letter-spacing:.7px;text-transform:uppercase;white-space:nowrap}
+.lesson-reveal[open] summary small{font-size:0}
+.lesson-reveal[open] summary small::after{content:'Answer Revealed';font-size:12px}
+.lesson-reveal-body{padding:20px 22px 22px}
+.lesson-reveal-body>p{margin:0;font-size:17px;line-height:1.65}
+.scenario-visual{margin:12px 0 20px;border:1px solid #cbdde5;border-radius:14px;overflow:hidden;background:#edf5f7}
+.scenario-visual img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain}
+.scenario-visual figcaption{padding:9px 14px;background:white;color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase}
+.eob-lab{margin-top:34px;padding-top:30px;border-top:1px solid var(--line)}
+.eob-lab>h2{margin-bottom:8px}
+.eob-sheet{margin:20px 0 28px;border:1px solid #b9cfd9;border-radius:16px;overflow:hidden;background:white;box-shadow:0 8px 28px #15384f10}
+.eob-banner{display:flex;justify-content:space-between;gap:24px;padding:22px 24px;background:var(--deep);color:white}
+.eob-banner div:last-child{text-align:right}
+.eob-banner small,.eob-meta small,.eob-payment small{display:block;color:#bcdbe4;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.eob-banner strong{display:block;margin-top:5px;font-size:21px}
+.eob-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#d9e6ec}
+.eob-meta>div{padding:18px 20px;background:#f7fafb}
+.eob-meta small{color:var(--teal)}
+.eob-meta strong,.eob-meta span{display:block}
+.eob-meta strong{margin:5px 0;font-size:16px}.eob-meta span{color:var(--muted);font-size:13px;line-height:1.4}
+.eob-table-wrap{overflow-x:auto}
+.eob-table{width:100%;min-width:940px;border-collapse:collapse;font-size:13px}
+.eob-table th,.eob-table td{padding:12px 10px;border-bottom:1px solid #dce7ec;text-align:right;white-space:nowrap}
+.eob-table th:nth-child(2),.eob-table td:nth-child(2){text-align:left}
+.eob-table thead{background:#edf5f7;color:var(--navy)}
+.eob-table tfoot{background:#eef8f5;color:#174c3b;font-weight:700}
+.eob-payment{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#d9e6ec;border-top:1px solid #d9e6ec}
+.eob-payment span{padding:16px 18px;background:#f7fafb}.eob-payment small{color:var(--teal)}.eob-payment strong{display:block;margin-top:5px;font-size:15px}
+.eob-key{margin:0;padding:14px 20px;background:#fff7e8;color:#66410a;font-size:14px}
+.eob-questions{margin-top:26px}
+.rcm-flip-board{display:grid;grid-template-columns:minmax(0,1fr) 25px minmax(0,1fr) 25px minmax(0,1fr);align-items:start;margin:20px 0 30px}
+.rcm-lane{border:1px solid #c7dce5;border-radius:16px;background:#fbfdfe;overflow:hidden;box-shadow:0 7px 20px #15384f0b}
+.rcm-lane>header{padding:20px;background:#eaf6f8}.rcm-stage-2>header{background:#eef3f9}.rcm-stage-3>header{background:#edf8f3}
+.rcm-lane>header>span{display:block;color:var(--teal);font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase}.rcm-lane>header h3{margin:5px 0 7px;font-size:21px}.rcm-lane>header p{font-size:14px;color:#365b6f;line-height:1.4}
+.rcm-flips{padding:10px}
+.rcm-flip{margin:8px 0;border:1px solid #d1e1e7;border-radius:11px;background:white;overflow:hidden}
+.rcm-flip summary{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:62px;padding:13px 14px;list-style:none;color:var(--navy);font-weight:700}
+.rcm-flip summary::-webkit-details-marker{display:none}.rcm-flip summary small{color:var(--teal);font-size:10px;text-transform:uppercase;letter-spacing:.6px;text-align:right}.rcm-flip[open] summary{background:#e9f7f6}.rcm-flip[open] summary small{font-size:0}.rcm-flip[open] summary small::after{content:'Flipped';font-size:10px}
+.rcm-flip>div{padding:14px;border-top:1px solid #d7e5eb}.rcm-flip p{font-size:14px;line-height:1.45}.rcm-example{margin-top:9px;padding-top:9px;border-top:1px dashed #d7e5eb;color:#365b6f}
+@media(max-width:1100px){.rcm-flip-board{grid-template-columns:1fr}.rcm-flip-board>.rcm-arrow{padding:5px;transform:rotate(90deg)}}
+@media(max-width:760px){.lesson-reveal summary{align-items:flex-start;min-height:68px;padding:16px;font-size:18px}.lesson-reveal summary small{display:none}.lesson-reveal-body{padding:17px}.scenario-visual img{max-height:none}.eob-banner{display:block}.eob-banner div:last-child{text-align:left;margin-top:15px}.eob-meta,.eob-payment{grid-template-columns:1fr}.eob-meta>div,.eob-payment span{padding:14px 16px}}

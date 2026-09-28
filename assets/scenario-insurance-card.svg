@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Fictional SummitCare insurance card</title><desc id="desc">A training insurance card for Maria Santos with a member ID, group number, PPO plan, effective date, copay and contact information.</desc>
+  <defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#12354d"/><stop offset="1" stop-color="#0d8391"/></linearGradient></defs>
+  <rect width="960" height="540" rx="34" fill="url(#g)"/>
+  <circle cx="835" cy="95" r="145" fill="#ffffff" opacity=".08"/><circle cx="875" cy="475" r="190" fill="#ffffff" opacity=".06"/>
+  <text x="62" y="82" fill="#bdeef0" font-family="Arial" font-size="24" font-weight="700" letter-spacing="3">FICTIONAL TRAINING CARD</text>
+  <text x="62" y="145" fill="white" font-family="Arial" font-size="42" font-weight="700">SummitCare Health</text><text x="786" y="145" fill="white" font-family="Arial" font-size="34" font-weight="700">PPO</text>
+  <line x1="62" x2="898" y1="180" y2="180" stroke="#ffffff" opacity=".28"/>
+  <g fill="#bdeef0" font-family="Arial" font-size="18" font-weight="700"><text x="62" y="230">MEMBER</text><text x="500" y="230">MEMBER ID</text><text x="62" y="330">GROUP</text><text x="310" y="330">EFFECTIVE</text><text x="555" y="330">OFFICE COPAY</text></g>
+  <g fill="white" font-family="Arial" font-size="30"><text x="62" y="270">Maria Santos</text><text x="500" y="270">SC482917</text><text x="62" y="370">GRP-7788</text><text x="310" y="370">01/01/2026</text><text x="555" y="370">$40</text></g>
+  <rect x="62" y="420" width="836" height="72" rx="16" fill="#ffffff" opacity=".14"/><text x="88" y="450" fill="#bdeef0" font-family="Arial" font-size="16" font-weight="700">PROVIDER SERVICES</text><text x="88" y="478" fill="white" font-family="Arial" font-size="23">1-800-555-0148  •  summitcare.example</text>
+</svg>
